@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Inter:wght@500;600;700;800;900&family=Jacques+Francois+Shadow&family=Lobster&family=Montserrat:wght@300;400;500&family=Open+Sans:ital,wght@0,300;0,400;1,300&family=Oswald:wght@400;500;700&family=Poppins:ital,wght@0,300;0,500;0,600;1,200;1,300;1,500&family=Public+Sans:ital,wght@0,100;0,300;0,500;1,100;1,200&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.App {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color:#0b0b0b  ;
+
+}
+
+.music-app {
+  max-width: 360px;
+  width: 100%;
+  height: 670px;
+  overflow-y: scroll;
+  color: #fff;
+  background-color: #000;
+  padding: 10px 15px;
+  position: relative;
+  /* -webkit-box-shadow: -1px 0px 18px -7px rgba(145,145,145,1);
+  -moz-box-shadow: -1px 0px 18px -7px rgba(145,145,145,1);
+  box-shadow: -1px 0px 18px -7px rgba(145,145,145,1); */
+}
+
+.music-app::-webkit-scrollbar {
+  display: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 37px;
+}
+
+.header img {
+  width: 35px;
+  cursor: pointer;
+}
+
+.header .search svg {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.home-content h1 {
+  margin-top: 20px;
+  font-size: 30px;
+}
+
+.seach-box {
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 15px;
+  position: relative;
+}
+
+.seach-box svg {
+  position: absolute;
+  font-size: 22px;
+  top: 50%;
+  left: 1%;
+  transform: translateY(-50%);
+  color: rgb(88, 88, 88);
+}
+
+.seach-box .input {
+  padding: 6px 0 10px 30px;
+  width: 100%;
+  font-size: 17px;
+  outline: none;
+  border: none;
+  color: rgb(214, 214, 214);
+  background: #333;
+}
+
+.search-input {
+  padding: 0;
+  width: 0;
+  font-size: 17px;
+  outline: none;
+  border: none;
+  font-weight: normal;
+  border-radius: 10px;
+  color: rgb(214, 214, 214);
+  background: #333;
+  transition: 0.3s;
+}
+
+.search-acticve {
+  width: 88%;
+  padding: 4px 8px;
+  transition: 0.3s;
+}
+
+
+
+::placeholder {
+  font-size: 15px;
+}
+
+.tab-box {
+  margin-top: 20px;
+  justify-content: space-between;
+  display: flex;
+  border-bottom: 1px solid grey;
+
+
+}
+
+.tab-box button {
+  background: transparent;
+  color: #fff;
+  width: 50%;
+  padding: 10px 0;
+  font-size: 19px;
+  border: none;
+  outline: none;
+
+}
+
+.tab-box .active {
+  border-bottom: 2px solid #FA0C4C;
+}
+
+.list-one {
+  display: flex;
+  margin-top: 15px;
+  justify-content: space-around;
+}
+
+.list-one .list {
+  margin-top: 0;
+}
+
+.music-tab {
+  display: none;
+}
+
+.list-one .music-img {
+  width: 130px;
+  height: 130px;
+  margin-bottom: 15px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: grey;
+}
+
+.audiolist {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px 15px;
+  background-color: #000;
+  overflow-y: auto;
+  z-index: 99;
+}
+
+.audiolist::-webkit-scrollbar {
+  display: none;
+}
+
+.audiolist .pre-btn svg {
+  font-size: 25px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.list {
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  cursor: pointer;
+}
+
+
+.list .music-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: grey;
+}
+
+.list .music-content p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+}
+
+.list .music-content p:last-child {
+  color: grey;
+}
+
+
+.fix-footer {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  padding: 10px 10px;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(https://cdn.pixabay.com/photo/2016/06/16/13/00/rain-stoppers-1461288_960_720.jpg);
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 165px;
+  transition: height 0.5s;
+  z-index: 99;
+}
+
+.fix-footer .top svg {
+  font-size: 22px;
+  cursor: pointer;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.fix-footer.active {
+  height: calc(100% - 60px);
+}
+
+.all-music {
+  padding: 4px 25px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  margin-top: 15px;
+  background: #fa0c4cd1;
+  color: #fff;
+  font-weight: 500;
+}
+
+.menu {
+  display: flex;
+  width: 120px;
+  padding: 0px 0px 10px 0;
+  text-align: center;
+  justify-content: space-around;
+  background-color: #000;
+  margin: auto;
+  border-radius: 8px;
+}
+
+.menu .home {
+  cursor: pointer;
+}
+
+.menu .home svg {
+  font-size: 15px;
+}
+
+.menu .home p {
+  font-size: 12px;
+  line-height: 10px;
+  margin: 0;
+}
+
+.fix-footer .list {
+  margin: 0px 0px 20px 0;
+}
+
+.fix-footer .list .play-btn svg {
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.play-box {
+  width: 225px;
+  height: 225px;
+  border-radius: 50%;
+  background: gray;
+  overflow: hidden;
+  margin: 20px auto;
+}
+
+.play-box img {
+  width: 100%;
+  height: 100%;
+}
+
+
+.main-play h3, h5 {
+  margin-bottom: 0;
+  font-weight: 400 !important;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.main-play h3 {
+  font-size: 20px;
+}
+
+.main-play h5 {
+  font-size: 15px;
+  color: grey;
+}
+
+/* .main-play .range input {
+  width: 100%;
+  height: 4px;
+} */
+
+.range {
+  min-width: 100%;
+  height: 4px;
+  background: gray;
+}
+
+.range-time {
+  width: 0;
+  height: 100%;
+  background-color: #FA0C4C;
+  position: relative;
+}
+
+.range-time::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #FA0C4C;
+  border-radius: 50%;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.main-play .navigate-music {
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.main-play .navigate-music svg {
+  font-size: 35px;
+  cursor: pointer;
+}
+
+.main-play .audio-play {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: grey;
+}
+
+.op-0 {
+  opacity: 1;
+}
